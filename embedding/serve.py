@@ -13,9 +13,7 @@ model = ColQwen2.from_pretrained(
     device_map=device,
 ).eval()
 
-
-
-processor = ColQwen2Processor.from_pretrained(LOCAL_PROCESSOR_PATH)
+processor = ColQwen2Processor.from_pretrained(model_name)
 
 app = Flask(__name__)
 
